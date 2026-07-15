@@ -1,7 +1,11 @@
+"use client"
+
 import Link from "next/link";
 import { Search, User, Heart, ShoppingBag } from "lucide-react";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
+  const items= useSelector((state)=> state.cart.items)
   return (
     <nav className="sticky top-0 z-50 flex h-20 items-center justify-between bg-white px-10 shadow-md">
       
@@ -42,7 +46,7 @@ export default function Navbar() {
 
         <div className="flex cursor-pointer flex-col items-center text-xs">
           <ShoppingBag size={20} />
-          <span>Bag</span>
+          <span><Link href="/cart">Bag ({items.length})</Link></span>
         </div>
 
       </div>

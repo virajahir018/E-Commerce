@@ -7,7 +7,8 @@ const products = [
     originalPrice: 999,
     discount: "40% OFF",
     rating: 4.3,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJPPMydfVZN-tN4vZm5phXbtDTZNvSM2NDvcukrpK-CQ&s=10",
+    image: "/images/product1.jpg",
+    quantity: 1
   },
   {
     id: 2,
@@ -17,7 +18,7 @@ const products = [
     originalPrice: 1499,
     discount: "40% OFF",
     rating: 4.5,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlQMR3GYiRwq83LJ--jEXpbzuRvMYgZLgt1WSKJRqEUg&s=10",
+    image: "/images/product2.jpg",
   },
   {
     id: 3,
@@ -27,7 +28,7 @@ const products = [
     originalPrice: 2999,
     discount: "33% OFF",
     rating: 4.6,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSee3gdxwjDRm7kpL5WAVh61KrxThyJlRhRjsSc269jCQ&s=10",
+    image: "/images/product3.jpg",
   },
   {
     id: 4,
@@ -37,7 +38,7 @@ const products = [
     originalPrice: 1999,
     discount: "35% OFF",
     rating: 4.4,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJXtCvs9SddGtkD1TLB-vFP9SvP60UQxaZD8JEc3e7Ig&s=10",
+    image: "/images/product4.jpg",
   },
 ];
 
