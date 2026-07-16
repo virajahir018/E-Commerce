@@ -1,9 +1,12 @@
 "use client";
 
-import { Image } from "lucide-react";
-import { useSelector } from "react-redux";
+import { decreaseQuantity, increaseQuantity, removeFromCart } from "@/redux/slices/cartSlice";
+import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function CartPage() {
+
+  const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.items);
 
   return (
@@ -23,7 +26,9 @@ export default function CartPage() {
             <Image
               src={item.image}
               alt={item.title}
-              className="h-32 w-24 rounded object-cover"
+              width={162}
+              height={62}
+              className="rounded object-cover"
             />
 
             <div>
@@ -35,7 +40,32 @@ export default function CartPage() {
 
               <p>₹{item.price}</p>
 
-              <p>Quantity: {item.quantity}</p>
+
+              <div className="flex items-center gap-3 mt-4">
+
+                <button
+                  onClick={() => dispatch(decreaseQuantity(item.id))}
+                  className="px-3 py-1 bg-gray-200 rounded"
+                >
+                  -
+                </button>
+
+                <span>{item.quantity}</span>
+
+                <button
+                  onClick={() => dispatch(increaseQuantity(item.id))}
+                  className="px-3 py-1 bg-gray-200 rounded"
+                >
+                  +
+                </button>
+
+              </div>
+
+              <button
+                onClick={()=>dispatch(removeFromCart(item.id))}
+                className="px-8 bg-pink-500 text-white"
+              >Remove</button>
+
             </div>
           </div>
         ))

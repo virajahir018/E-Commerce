@@ -50,16 +50,6 @@ export default async function ProductDetails({ params }) {
 
           </div>
 
-
-          <p
-            className="mt-5 font-bold text-gray-500"
-          >Quantity : <select name="" id="">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select></p>
-
           <AddToCartButton product={product} />
         </div>
 
