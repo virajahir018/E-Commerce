@@ -2,6 +2,7 @@ import products from "@/data/products";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import AddToCartButton from "@/components/product/AddToCartButton";
+import WishlistButton from "@/components/product/WishlistButton";
 
 export default async function ProductDetails({ params }) {
   const { id } = await params;
@@ -18,7 +19,7 @@ export default async function ProductDetails({ params }) {
     <section className="max-w-7xl mx-auto py-10 px-5">
       <div className="grid grid-cols-2 gap-10">
 
-        <div>
+        <div className="relative">
           <Image
             src={product.image}
             alt={product.title}
@@ -26,6 +27,8 @@ export default async function ProductDetails({ params }) {
             height={600}
             className="rounded-xl object-cover"
           />
+
+          <WishlistButton product={product}/>
         </div>
 
         <div>

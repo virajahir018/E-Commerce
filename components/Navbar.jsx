@@ -51,10 +51,12 @@ export default function Navbar() {
           <span>Profile</span>
         </div>
 
-        <div className="flex cursor-pointer flex-col items-center text-xs">
-          <Heart size={20} />
-          <span>Wishlist</span>
-        </div>
+        <Link href="/wishlist">
+          <div className="flex cursor-pointer flex-col items-center text-xs">
+            <Heart size={20} />
+            <span>Wishlist</span>
+          </div>
+        </Link>
 
         <Link href="/cart">
           <div className="flex cursor-pointer flex-col items-center text-xs">

@@ -1,15 +1,23 @@
+
 import Link from "next/link";
+import WishlistButton from "./product/WishlistButton";
 
 export default function ProductCard({ product }) {
+
+
   return (
     <Link href={`/product/${product.id}`}>
       <div className="rounded-lg border bg-white shadow-sm transition hover:shadow-lg">
 
-        <img
-          src={product.image}
-          alt={product.title}
-          className="h-72 w-full rounded-t-lg object-cover"
-        />
+        <div className="relative">
+          <img
+            src={product.image}
+            alt={product.title}
+            className="h-72 w-full rounded-t-lg object-cover"
+          />
+
+          <WishlistButton product={product} />
+        </div>
 
         <div className="p-4">
 
